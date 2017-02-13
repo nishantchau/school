@@ -16,5 +16,9 @@ namespace MyMvcApp.Controllers
             return View();
         }
 
+        public ActionResult AddTest()
+        {
+            return View();
+        }
     }
 }
