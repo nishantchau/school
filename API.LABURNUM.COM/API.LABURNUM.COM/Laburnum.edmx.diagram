@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="87e503062e7f4e91aec09e04a531fea8" Name="Diagram1">
+        <EntityTypeShape EntityType="LaburnumModel.AdmissionType" Width="1.5" PointX="3.01223745709855" PointY="18.20417932523609" />
+        <EntityTypeShape EntityType="LaburnumModel.ApiClient" Width="1.5" PointX="1.2835731530951211" PointY="20.850840533548425" />
+        <EntityTypeShape EntityType="LaburnumModel.BusRoute" Width="1.5" PointX="9.1712233541399346" PointY="14.478691867775606" />
+        <EntityTypeShape EntityType="LaburnumModel.Class" Width="1.5" PointX="9.6001800846309315" PointY="8.286795947834289" />
+        <EntityTypeShape EntityType="LaburnumModel.Faculty" Width="1.5" PointX="5.8597279702591374" PointY="8.026560593408794" />
+        <EntityTypeShape EntityType="LaburnumModel.Fee" Width="1.5" PointX="8.0219762176377589" PointY="13.711801103182044" />
+        <EntityTypeShape EntityType="LaburnumModel.LoginActivity" Width="1.5" PointX="0.41583399493984596" PointY="27.96969818881233" />
+        <EntityTypeShape EntityType="LaburnumModel.Salutation" Width="1.5" PointX="6.0110657243109618" PointY="30.947593986498003" />
+        <EntityTypeShape EntityType="LaburnumModel.Section" Width="1.5" PointX="2.3647719316020477" PointY="23.665524627857621" />
+        <EntityTypeShape EntityType="LaburnumModel.Student" Width="1.5" PointX="2.6070190866510474" PointY="27.809382466510581" />
+        <EntityTypeShape EntityType="LaburnumModel.StudentFee" Width="1.5" PointX="9.389712133160657" PointY="19.292996653957758" />
+        <EntityTypeShape EntityType="LaburnumModel.StudentFeeDetail" Width="1.5" PointX="10.137638813880106" PointY="27.193888602402939" />
+        <AssociationConnector Association="LaburnumModel.FK_Fee_AdmissionType" />
+        <AssociationConnector Association="LaburnumModel.FK_Fee_Class" />
+        <AssociationConnector Association="LaburnumModel.FK_Section_Class" />
+        <AssociationConnector Association="LaburnumModel.FK_Student_Class" />
+        <AssociationConnector Association="LaburnumModel.FK_Student_Class1" />
+        <AssociationConnector Association="LaburnumModel.FK_LoginActivity_Student" />
+        <AssociationConnector Association="LaburnumModel.FK_Student_Salutation" />
+        <AssociationConnector Association="LaburnumModel.FK_Student_Section" />
+        <AssociationConnector Association="LaburnumModel.FK_StudentFeeDetail_StudentFee" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

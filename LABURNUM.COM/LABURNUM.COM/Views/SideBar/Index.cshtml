@@ -1,0 +1,90 @@
+﻿@{
+    Layout = null;
+}
+
+
+<!-- START X-NAVIGATION -->
+<ul class="x-navigation">
+    <li class="xn-logo">
+        <a href="index.html">ATLANT</a>
+        <a href="#" class="x-navigation-control"></a>
+    </li>
+    <li class="xn-profile">
+        <a href="#" class="profile-mini">
+            <img src="@LABURNUM.COM.Component.Constants.URL.WEBSITEURLWITHOUTSLASH/Images/profile_avatar.jpg" alt="" />
+        </a>
+        <div class="profile">
+            <div class="sidebar-widget author-widget">
+                <div class="media">
+                    <a href="#" class="media-left profile-online">
+                        <img alt="" class="img-responsive" src="@LABURNUM.COM.Component.Constants.URL.WEBSITEURLWITHOUTSLASH/Images/profile_avatar.jpg">
+                    </a>
+                    <div class="media-body">
+                        <div>Welcome</div>
+                        <div class="media-author">Vipin Kaushik</div>
+                    </div>
+                </div>
+            </div>
+            <ul class="ac_userProfile">
+                <li>User Id : Admin</li>
+                <li>Id : AC89</li>
+                <li>Expiry Date : 29th September 2016</li>
+            </ul>
+        </div>
+    </li>
+
+    <li><a href="./"><span class="fa fa-dashboard"></span><span class="xn-text">Dashboards</span></a></li>
+    <li class="xn-openable">
+        <a href="javascript:;">
+            <span class="fa fa-ticket"></span>
+            <span class="xn-text">Class</span>
+        </a>
+        <ul>
+            <li><a href="@LABURNUM.COM.Component.Constants.URL.WEBSITEURLWITHOUTSLASH/AddClass/Index">Add</a></li>
+            <li><a href="@LABURNUM.COM.Component.Constants.URL.WEBSITEURLWITHOUTSLASH/SeachClassByAdvanceSearch/Index">Edit</a></li>
+            <li><a href="@LABURNUM.COM.Component.Constants.URL.WEBSITEURLWITHOUTSLASH/SeachClassByAdvanceSearch/Index">Delete</a></li>
+            <li><a href="@LABURNUM.COM.Component.Constants.URL.WEBSITEURLWITHOUTSLASH/SeachClassByAdvanceSearch/Index">Search</a></li>
+        </ul>
+    </li>
+    <li class="xn-openable">
+        <a href="javascript:;">
+            <span class="fa fa-hand-o-up"></span>
+            <span class="xn-text">Admission Type</span>
+        </a>
+        <ul>
+            <li><a href="@LABURNUM.COM.Component.Constants.URL.WEBSITEURLWITHOUTSLASH/AdmissionType/AddIndex">Add</a></li>
+            <li><a href="@LABURNUM.COM.Component.Constants.URL.WEBSITEURLWITHOUTSLASH/AdmissionType/SearchAdmissionTypeByAdvanceSearchIndex">Edit</a></li>
+            <li><a href="@LABURNUM.COM.Component.Constants.URL.WEBSITEURLWITHOUTSLASH/AdmissionType/SearchAdmissionTypeByAdvanceSearchIndex">Delete</a></li>
+            <li><a href="@LABURNUM.COM.Component.Constants.URL.WEBSITEURLWITHOUTSLASH/AdmissionType/SearchAdmissionTypeByAdvanceSearchIndex">Search</a></li>
+        </ul>
+    </li>
+    <li class="xn-openable">
+        <a href="javascript:;">
+            <span class="fa fa-ticket"></span>
+            <span class="xn-text">Approved By</span>
+        </a>
+        <ul>
+            <li><a href="./">Add</a></li>
+            <li><a href="./">Edit</a></li>
+            <li><a href="./">Withdraw</a></li>
+            <li><a href="./">Search</a></li>
+        </ul>
+    </li>
+    <li><a href="./"><span class="fa fa-user"></span><span class="xn-text">Add Friend </span></a></li>
+    <li><a href="./"><span class="fa fa-book"></span><span class="xn-text">H2H Guide</span></a></li>
+    <li><a href="./"><span class="fa fa-cloud"></span><span class="xn-text">Weather </span></a></li>
+    <li><a href="./"><span class="fa fa-user"></span><span class="xn-text">Refer a Friend </span></a></li>
+</ul>
+<!-- END X-NAVIGATION -->
+
+
+<script type="text/javascript">
+
+    $('.arrow_toggle a').click(function () {
+        $('html, body').animate({
+            scrollTop: $(document).height()
+        },
+        1500);
+        return false;
+    });
+</script>

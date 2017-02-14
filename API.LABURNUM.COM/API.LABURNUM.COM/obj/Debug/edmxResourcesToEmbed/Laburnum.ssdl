@@ -1,0 +1,331 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="LaburnumModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityContainer Name="LaburnumModelStoreContainer">
+    <EntitySet Name="AdmissionType" EntityType="LaburnumModel.Store.AdmissionType" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="ApiClient" EntityType="LaburnumModel.Store.ApiClient" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="BusRoute" EntityType="LaburnumModel.Store.BusRoute" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Class" EntityType="LaburnumModel.Store.Class" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Faculty" EntityType="LaburnumModel.Store.Faculty" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Fee" EntityType="LaburnumModel.Store.Fee" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="LoginActivity" EntityType="LaburnumModel.Store.LoginActivity" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Salutation" EntityType="LaburnumModel.Store.Salutation" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Section" EntityType="LaburnumModel.Store.Section" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Student" EntityType="LaburnumModel.Store.Student" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="StudentFee" EntityType="LaburnumModel.Store.StudentFee" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="StudentFeeDetail" EntityType="LaburnumModel.Store.StudentFeeDetail" store:Type="Tables" Schema="dbo" />
+    <AssociationSet Name="FK_Fee_AdmissionType" Association="LaburnumModel.Store.FK_Fee_AdmissionType">
+      <End Role="AdmissionType" EntitySet="AdmissionType" />
+      <End Role="Fee" EntitySet="Fee" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Fee_Class" Association="LaburnumModel.Store.FK_Fee_Class">
+      <End Role="Class" EntitySet="Class" />
+      <End Role="Fee" EntitySet="Fee" />
+    </AssociationSet>
+    <AssociationSet Name="FK_LoginActivity_Student" Association="LaburnumModel.Store.FK_LoginActivity_Student">
+      <End Role="Student" EntitySet="Student" />
+      <End Role="LoginActivity" EntitySet="LoginActivity" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Section_Class" Association="LaburnumModel.Store.FK_Section_Class">
+      <End Role="Class" EntitySet="Class" />
+      <End Role="Section" EntitySet="Section" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Student_Class" Association="LaburnumModel.Store.FK_Student_Class">
+      <End Role="Class" EntitySet="Class" />
+      <End Role="Student" EntitySet="Student" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Student_Class1" Association="LaburnumModel.Store.FK_Student_Class1">
+      <End Role="Class" EntitySet="Class" />
+      <End Role="Student" EntitySet="Student" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Student_Salutation" Association="LaburnumModel.Store.FK_Student_Salutation">
+      <End Role="Salutation" EntitySet="Salutation" />
+      <End Role="Student" EntitySet="Student" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Student_Section" Association="LaburnumModel.Store.FK_Student_Section">
+      <End Role="Section" EntitySet="Section" />
+      <End Role="Student" EntitySet="Student" />
+    </AssociationSet>
+    <AssociationSet Name="FK_StudentFeeDetail_StudentFee" Association="LaburnumModel.Store.FK_StudentFeeDetail_StudentFee">
+      <End Role="StudentFee" EntitySet="StudentFee" />
+      <End Role="StudentFeeDetail" EntitySet="StudentFeeDetail" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="AdmissionType">
+    <Key>
+      <PropertyRef Name="AdmissionTypeId" />
+    </Key>
+    <Property Name="AdmissionTypeId" Type="bigint" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="nvarchar" Nullable="false" MaxLength="50" />
+    <Property Name="IsActive" Type="bit" Nullable="false" />
+    <Property Name="CreatedOn" Type="datetime" Nullable="false" />
+    <Property Name="LastUpdated" Type="datetime" />
+  </EntityType>
+  <EntityType Name="ApiClient">
+    <Key>
+      <PropertyRef Name="ApiClientId" />
+    </Key>
+    <Property Name="ApiClientId" Type="bigint" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="ClientName" Type="nvarchar" Nullable="false" MaxLength="50" />
+    <Property Name="UserName" Type="nvarchar" Nullable="false" MaxLength="50" />
+    <Property Name="Password" Type="nvarchar" Nullable="false" MaxLength="50" />
+    <Property Name="IsActive" Type="bit" Nullable="false" />
+    <Property Name="CreatedOn" Type="datetime" Nullable="false" />
+    <Property Name="LastUpdated" Type="nchar" MaxLength="10" />
+  </EntityType>
+  <EntityType Name="BusRoute">
+    <Key>
+      <PropertyRef Name="BusRouteId" />
+    </Key>
+    <Property Name="BusRouteId" Type="bigint" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="BusRouteNumber" Type="nvarchar" Nullable="false" MaxLength="50" />
+    <Property Name="BusStartFrom" Type="nvarchar" Nullable="false" MaxLength="500" />
+    <Property Name="BusEndAt" Type="nvarchar" Nullable="false" MaxLength="500" />
+    <Property Name="IsActive" Type="bit" Nullable="false" />
+    <Property Name="CreatedOn" Type="datetime" Nullable="false" />
+    <Property Name="LastUpdate" Type="datetime" />
+  </EntityType>
+  <EntityType Name="Class">
+    <Key>
+      <PropertyRef Name="ClassId" />
+    </Key>
+    <Property Name="ClassId" Type="bigint" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="ClassName" Type="nvarchar" Nullable="false" MaxLength="50" />
+    <Property Name="IsActive" Type="bit" Nullable="false" />
+    <Property Name="CreatedOn" Type="datetime" Nullable="false" />
+    <Property Name="LastUpdated" Type="datetime" />
+  </EntityType>
+  <EntityType Name="Faculty">
+    <Key>
+      <PropertyRef Name="FacultyId" />
+    </Key>
+    <Property Name="FacultyId" Type="bigint" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="FacultyName" Type="nvarchar" Nullable="false" MaxLength="500" />
+    <Property Name="UserName" Type="nvarchar" Nullable="false" MaxLength="50" />
+    <Property Name="Password" Type="nvarchar" Nullable="false" MaxLength="50" />
+    <Property Name="IsActive" Type="bit" Nullable="false" />
+    <Property Name="CreatedOn" Type="datetime" Nullable="false" />
+    <Property Name="LastUpdated" Type="datetime" />
+  </EntityType>
+  <EntityType Name="Fee">
+    <Key>
+      <PropertyRef Name="FeeId" />
+    </Key>
+    <Property Name="FeeId" Type="bigint" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="ClassId" Type="bigint" Nullable="false" />
+    <Property Name="AdmissionTypeId" Type="bigint" Nullable="false" />
+    <Property Name="AdmissionFee" Type="float" Nullable="false" />
+    <Property Name="DevelopementCharges" Type="float" />
+    <Property Name="AnnualCharges" Type="float" />
+    <Property Name="ExamFee" Type="float" />
+    <Property Name="SportsFee" Type="float" />
+    <Property Name="MonthlyFee" Type="float" />
+    <Property Name="IsActive" Type="bit" Nullable="false" />
+    <Property Name="CreatedOn" Type="datetime" Nullable="false" />
+    <Property Name="LastUpdated" Type="datetime" />
+  </EntityType>
+  <EntityType Name="LoginActivity">
+    <Key>
+      <PropertyRef Name="LoginActivityId" />
+    </Key>
+    <Property Name="LoginActivityId" Type="bigint" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="StudentId" Type="bigint" Nullable="false" />
+    <Property Name="LoginAt" Type="datetime" Nullable="false" />
+    <Property Name="LogoutAt" Type="datetime" />
+    <Property Name="IsActive" Type="bit" Nullable="false" />
+    <Property Name="CreatedOn" Type="datetime" Nullable="false" />
+    <Property Name="LastUpdated" Type="datetime" />
+  </EntityType>
+  <EntityType Name="Salutation">
+    <Key>
+      <PropertyRef Name="SalutationId" />
+    </Key>
+    <Property Name="SalutationId" Type="bigint" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="nvarchar" Nullable="false" MaxLength="50" />
+    <Property Name="IsActive" Type="bit" Nullable="false" />
+    <Property Name="CreatedOn" Type="datetime" />
+    <Property Name="LastUpdated" Type="datetime" />
+  </EntityType>
+  <EntityType Name="Section">
+    <Key>
+      <PropertyRef Name="SectionId" />
+    </Key>
+    <Property Name="SectionId" Type="bigint" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="SectionName" Type="nvarchar" Nullable="false" MaxLength="50" />
+    <Property Name="ClassId" Type="bigint" Nullable="false" />
+    <Property Name="IsActive" Type="bit" Nullable="false" />
+    <Property Name="CreatedOn" Type="datetime" Nullable="false" />
+    <Property Name="LastUpdated" Type="datetime" />
+  </EntityType>
+  <EntityType Name="Student">
+    <Key>
+      <PropertyRef Name="StudentId" />
+    </Key>
+    <Property Name="StudentId" Type="bigint" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="ClassId" Type="bigint" Nullable="false" />
+    <Property Name="ClassStartWithId" Type="bigint" Nullable="false" />
+    <Property Name="SectionId" Type="bigint" Nullable="false" />
+    <Property Name="FirstName" Type="nvarchar" Nullable="false" MaxLength="100" />
+    <Property Name="MiddleName" Type="nvarchar" MaxLength="100" />
+    <Property Name="LastName" Type="nvarchar" MaxLength="100" />
+    <Property Name="SalutationId" Type="bigint" Nullable="false" />
+    <Property Name="EmailId" Type="nvarchar" Nullable="false" MaxLength="50" />
+    <Property Name="Mobile" Type="nvarchar" Nullable="false" MaxLength="50" />
+    <Property Name="Address" Type="nvarchar" Nullable="false" />
+    <Property Name="DOB" Type="datetime" Nullable="false" />
+    <Property Name="Landline" Type="nvarchar" MaxLength="50" />
+    <Property Name="StudentAadharNumber" Type="nvarchar" MaxLength="50" />
+    <Property Name="FatherName" Type="nvarchar" Nullable="false" MaxLength="100" />
+    <Property Name="FatherMobile" Type="nvarchar" Nullable="false" MaxLength="50" />
+    <Property Name="FatherProfession" Type="nvarchar" Nullable="false" MaxLength="100" />
+    <Property Name="PAN" Type="nvarchar" MaxLength="50" />
+    <Property Name="FatherAadharNumber" Type="nvarchar" MaxLength="50" />
+    <Property Name="MotherName" Type="nvarchar" Nullable="false" MaxLength="100" />
+    <Property Name="MotherMobile" Type="nvarchar" Nullable="false" MaxLength="50" />
+    <Property Name="MotherProfession" Type="nvarchar" Nullable="false" MaxLength="100" />
+    <Property Name="MotherAadharNumber" Type="nvarchar" MaxLength="50" />
+    <Property Name="BusRouteNumber" Type="bigint" />
+    <Property Name="StudentUserName" Type="nvarchar" Nullable="false" MaxLength="50" />
+    <Property Name="StudentPassword" Type="nvarchar" Nullable="false" MaxLength="50" />
+    <Property Name="ParentUserName" Type="nvarchar" Nullable="false" MaxLength="50" />
+    <Property Name="ParentPassword" Type="nvarchar" Nullable="false" MaxLength="50" />
+    <Property Name="IsActive" Type="bit" Nullable="false" />
+    <Property Name="CreatedOn" Type="datetime" Nullable="false" />
+    <Property Name="LastUpdated" Type="datetime" />
+  </EntityType>
+  <EntityType Name="StudentFee">
+    <Key>
+      <PropertyRef Name="StudentFeeId" />
+    </Key>
+    <Property Name="StudentFeeId" Type="bigint" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="StudentId" Type="bigint" Nullable="false" />
+    <Property Name="ClassId" Type="bigint" Nullable="false" />
+    <Property Name="AdmissionTypeId" Type="bigint" Nullable="false" />
+    <Property Name="IsActive" Type="bit" Nullable="false" />
+    <Property Name="CreatedOn" Type="datetime" Nullable="false" />
+    <Property Name="LastUpdated" Type="datetime" />
+  </EntityType>
+  <EntityType Name="StudentFeeDetail">
+    <Key>
+      <PropertyRef Name="StudentFeeDetailId" />
+    </Key>
+    <Property Name="StudentFeeDetailId" Type="bigint" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="StudentFeeId" Type="bigint" Nullable="false" />
+    <Property Name="AdmissionFee" Type="float" Nullable="false" />
+    <Property Name="DevelopementCharges" Type="float" />
+    <Property Name="AnnualCharges" Type="float" />
+    <Property Name="ExamFee" Type="float" />
+    <Property Name="SportsFee" Type="float" />
+    <Property Name="MonthlyFee" Type="float" />
+    <Property Name="IsActive" Type="bit" Nullable="false" />
+    <Property Name="CreatedOn" Type="datetime" Nullable="false" />
+    <Property Name="LastUpdated" Type="datetime" />
+  </EntityType>
+  <Association Name="FK_Fee_AdmissionType">
+    <End Role="AdmissionType" Type="LaburnumModel.Store.AdmissionType" Multiplicity="1" />
+    <End Role="Fee" Type="LaburnumModel.Store.Fee" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="AdmissionType">
+        <PropertyRef Name="AdmissionTypeId" />
+      </Principal>
+      <Dependent Role="Fee">
+        <PropertyRef Name="AdmissionTypeId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Fee_Class">
+    <End Role="Class" Type="LaburnumModel.Store.Class" Multiplicity="1" />
+    <End Role="Fee" Type="LaburnumModel.Store.Fee" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Class">
+        <PropertyRef Name="ClassId" />
+      </Principal>
+      <Dependent Role="Fee">
+        <PropertyRef Name="ClassId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_LoginActivity_Student">
+    <End Role="Student" Type="LaburnumModel.Store.Student" Multiplicity="1" />
+    <End Role="LoginActivity" Type="LaburnumModel.Store.LoginActivity" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Student">
+        <PropertyRef Name="StudentId" />
+      </Principal>
+      <Dependent Role="LoginActivity">
+        <PropertyRef Name="StudentId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Section_Class">
+    <End Role="Class" Type="LaburnumModel.Store.Class" Multiplicity="1" />
+    <End Role="Section" Type="LaburnumModel.Store.Section" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Class">
+        <PropertyRef Name="ClassId" />
+      </Principal>
+      <Dependent Role="Section">
+        <PropertyRef Name="ClassId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Student_Class">
+    <End Role="Class" Type="LaburnumModel.Store.Class" Multiplicity="1" />
+    <End Role="Student" Type="LaburnumModel.Store.Student" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Class">
+        <PropertyRef Name="ClassId" />
+      </Principal>
+      <Dependent Role="Student">
+        <PropertyRef Name="ClassId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Student_Class1">
+    <End Role="Class" Type="LaburnumModel.Store.Class" Multiplicity="1" />
+    <End Role="Student" Type="LaburnumModel.Store.Student" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Class">
+        <PropertyRef Name="ClassId" />
+      </Principal>
+      <Dependent Role="Student">
+        <PropertyRef Name="ClassStartWithId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Student_Salutation">
+    <End Role="Salutation" Type="LaburnumModel.Store.Salutation" Multiplicity="1" />
+    <End Role="Student" Type="LaburnumModel.Store.Student" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Salutation">
+        <PropertyRef Name="SalutationId" />
+      </Principal>
+      <Dependent Role="Student">
+        <PropertyRef Name="SalutationId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Student_Section">
+    <End Role="Section" Type="LaburnumModel.Store.Section" Multiplicity="1" />
+    <End Role="Student" Type="LaburnumModel.Store.Student" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Section">
+        <PropertyRef Name="SectionId" />
+      </Principal>
+      <Dependent Role="Student">
+        <PropertyRef Name="SectionId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_StudentFeeDetail_StudentFee">
+    <End Role="StudentFee" Type="LaburnumModel.Store.StudentFee" Multiplicity="1" />
+    <End Role="StudentFeeDetail" Type="LaburnumModel.Store.StudentFeeDetail" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="StudentFee">
+        <PropertyRef Name="StudentFeeId" />
+      </Principal>
+      <Dependent Role="StudentFeeDetail">
+        <PropertyRef Name="StudentFeeId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+</Schema>
