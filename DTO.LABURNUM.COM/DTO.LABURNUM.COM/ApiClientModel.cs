@@ -15,7 +15,5 @@ namespace DTO.LABURNUM.COM
         public bool IsActive { get; set; }
         public System.DateTime CreatedOn { get; set; }
         public string LastUpdated { get; set; }
-        public string testprop1 { get; set; }
-        public string testprop2 { get; set; }
     }
 }
