@@ -3,3 +3,8 @@ E:\Projects\Working Projects\Laburnum\DTO.LABURNUM.COM\DTO.LABURNUM.COM\bin\Debu
 E:\Projects\Working Projects\Laburnum\DTO.LABURNUM.COM\DTO.LABURNUM.COM\obj\Debug\DTO.LABURNUM.COM.csprojResolveAssemblyReference.cache
 E:\Projects\Working Projects\Laburnum\DTO.LABURNUM.COM\DTO.LABURNUM.COM\obj\Debug\DTO.LABURNUM.COM.dll
 E:\Projects\Working Projects\Laburnum\DTO.LABURNUM.COM\DTO.LABURNUM.COM\obj\Debug\DTO.LABURNUM.COM.pdb
+C:\Users\lenovo 2\Documents\GitHub\school\DTO.LABURNUM.COM\DTO.LABURNUM.COM\bin\Debug\DTO.LABURNUM.COM.dll
+C:\Users\lenovo 2\Documents\GitHub\school\DTO.LABURNUM.COM\DTO.LABURNUM.COM\bin\Debug\DTO.LABURNUM.COM.pdb
+C:\Users\lenovo 2\Documents\GitHub\school\DTO.LABURNUM.COM\DTO.LABURNUM.COM\obj\Debug\DTO.LABURNUM.COM.csprojResolveAssemblyReference.cache
+C:\Users\lenovo 2\Documents\GitHub\school\DTO.LABURNUM.COM\DTO.LABURNUM.COM\obj\Debug\DTO.LABURNUM.COM.dll
+C:\Users\lenovo 2\Documents\GitHub\school\DTO.LABURNUM.COM\DTO.LABURNUM.COM\obj\Debug\DTO.LABURNUM.COM.pdb
